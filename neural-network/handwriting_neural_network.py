@@ -3,9 +3,9 @@ from neural_network import neuralNetwork
 import numpy as np
 
 num_input_nodes = 784
-num_hidden_nodes = 200  # random value -> we can choose best value by heuristic
+num_hidden_nodes = 200  # random value -> we can choose the best value by heuristic
 num_output_nodes = 10  # label is between 0 ~ 9
-learning_rate = 0.1  # random value -> we can choose best value by heuristic
+learning_rate = 0.1  # random value -> we can choose the best value by heuristic
 
 neural_network = neuralNetwork(num_input_nodes, num_hidden_nodes, num_output_nodes, learning_rate)
 
@@ -15,7 +15,7 @@ def training():
     training_data_list = training_data_file.readlines()
     training_data_file.close()
 
-    epochs = 5  # random value -> we can choose best value by heuristic
+    epochs = 5  # random value -> we can choose the best value by heuristic
 
     print("Start training!")
     for e in range(epochs):
