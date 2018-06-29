@@ -12,7 +12,7 @@ Machine-Learning
    
    100개 학습 데이터: https://git.io/vySZ1
    
-   100개 테스트 데이터: https://git.io/vySZP
+   10개 테스트 데이터: https://git.io/vySZP
    
    (raw file로 브라우저에 나타날시, 오른쪽 마우스 클릭 -> 다른이름으로 저장)
    
