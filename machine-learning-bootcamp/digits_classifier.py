@@ -23,4 +23,14 @@ classifier.fit(images[:train_size], labels[:train_size])
 expected_data = labels[train_size:]
 predicted_data = classifier.predict(images[train_size:])
 
+# == Performance of classifier
 print("Accuracy: ", metrics.accuracy_score(expected_data, predicted_data))
+
+print("\nConfusion Matrix: \n", metrics.confusion_matrix(expected_data, predicted_data))
+
+print("\nPrecision: ", metrics.precision_score(expected_data, predicted_data, pos_label=3))
+
+print("\nRecall: ", metrics.recall_score(expected_data, predicted_data, pos_label=3))
+
+print("\nF-measure: ", metrics.f1_score(expected_data, predicted_data, pos_label=3))
+
