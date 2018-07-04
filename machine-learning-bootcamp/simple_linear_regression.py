@@ -27,9 +27,11 @@ def main():
 
     model = linear_model.LinearRegression()
     model.fit(x, y)
+    score = model.score(x, y)
 
     print("model coefficient: ", model.coef_)  # 기울기
     print("model intercept: ", model.intercept_)  # 절편
+    print("R-squared: ", score)  # 모델의 결정 계수
 
     plt.scatter(x, y, marker='+')
     plt.scatter(x, model.predict(x), marker='o')
