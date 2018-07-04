@@ -16,7 +16,7 @@ y_test = y[30:]
 
 X_TRAIN = np.c_[x_train**6, x_train**5, x_train**4, x_train**3, x_train**2, x_train]  # 6차식으로 회귀 (원래의 선형식이 몇차식인지 모른다고 가정)
 
-model = linear_model.LinearRegression()
+model = linear_model.Ridge()
 model.fit(X_TRAIN, y_train)
 
 score = model.score(X_TRAIN, y_train)
@@ -26,8 +26,6 @@ print("model intercept (TRAIN): ", model.intercept_)  # 절편
 print("R-squared (TRAIN): ", score)  # 모델의 결정 계수
 
 X_TEST = np.c_[x_test**6, x_test**5, x_test**4, x_test**3, x_test**2, x_test]
-
-# == overfitting 발생
 score = model.score(X_TEST, y_test)
 print("R-squared (TEST): ", score)  # 모델의 결정 계수
 
