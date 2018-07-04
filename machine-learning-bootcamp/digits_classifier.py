@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn import datasets, tree, metrics, ensemble
+from sklearn import datasets, tree, metrics, ensemble, svm
 
 import sys
 
@@ -51,9 +51,21 @@ def main():
     elif index == 1:
         classifier = tree.DecisionTreeClassifier(max_depth=3)
     elif index == 2:
-        # == n_estimators: number of weak learners, criterion: decision tree algorithm
-        # == random forest - bagging algorithm 
+        # == parameter
+        #    - n_estimators: number of weak learners
+        #    - criterion: decision tree algorithm
+        # == random forest - bagging
         classifier = ensemble.RandomForestClassifier(n_estimators=20, max_depth=3, criterion="gini")
+    elif index == 3:
+        # == parameter
+        #    - base_estimator: decide weak learners
+        # == adaboost - boosting
+        classifier = ensemble.AdaBoostClassifier(base_estimator=tree.DecisionTreeClassifier(max_depth=3), n_estimators=20)
+    elif index == 4:
+        # == parameter
+        #    - C: error parameter. How much error is allowed
+        #    - gamma: The higher value is, the more complicated curved surface is determined (곡면)
+        classifier = svm.SVC(C=1.0, gamma=0.001)
     else:
         print("No classifier\n")
         sys.exit(0)
