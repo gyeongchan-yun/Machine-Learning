@@ -103,8 +103,9 @@ Machine-Learning
     * 평가 
       * 결정 계수
       
-      ![equation](https://latex.codecogs.com/gif.latex?R%5E%7B2%7D%20%3D%201%20-%20%5Cfrac%7BY%7D%7BX%7D)
-      Y: 관측 값과 예측 값 차의 제곱 합 X: 관측 값과 측정값 전체 평균의 제곱 합
+        ![equation](https://latex.codecogs.com/gif.latex?R%5E%7B2%7D%20%3D%201%20-%20%5Cfrac%7BY%7D%7BX%7D)
+        
+        Y: 관측 값과 예측 값 차의 제곱 합 X: 관측 값과 측정값 전체 평균의 제곱 합
       * 1에 가까울 수록 좋은 모델
     
   * **클러스터링(Clustering)**
