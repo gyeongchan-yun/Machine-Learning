@@ -42,7 +42,7 @@ Machine-Learning
           실제\예측   | Positive | Negative
         -------- | ---------| --------
         Positive | True Positive(TP) | False Negative(FN)
-        Negative | False Negative(FP) | True Negative(TN)
+        Negative | False Positive(FP) | True Negative(TN)
       
       * 정답률(Accuracy): 전체 예측안에 정답이 있는 비율
       
@@ -59,6 +59,8 @@ Machine-Learning
       * F값(F-measure): 적합률과 재현률의 조화 평균
       
         ![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7B2%7D%7B%5Cfrac%7B1%7D%7BPrecision%7D%20&plus;%20%5Cfrac%7B1%7D%7BRecall%7D%7D)
+        
+        
     * 여러가지 classifier
       * 결정 트리 (Decision Tree)
         * 데이터를 여러 등급으로 분류하는 지도 학습
